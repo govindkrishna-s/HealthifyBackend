@@ -1,0 +1,28 @@
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username":"django",
+    "email":"unwarlike2@gmail.com",
+    "password":"python123"
+}
+
+###
+POST http://127.0.0.1:8000/api/meal/
+Content-Type: application/json
+Authorization: Basic rest:python123
+
+{
+    "title":"Biriyani",
+    "meal_type": "lunch",
+    "calorie":200
+}
+###
+GET http://127.0.0.1:8000/api/meal/
+Authorization: Basic rest:python123
+
+
+###
+DELETE  http://127.0.0.1:8000/api/meal/2/
+Authorization: Basic rest:python123
