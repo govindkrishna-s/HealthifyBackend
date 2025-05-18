@@ -14,8 +14,8 @@ Content-Type: application/json
 Authorization: Basic rest:python123
 
 {
-    "title":"Biriyani",
-    "meal_type": "lunch",
+    "title":"Noodles",
+    "meal_type": "dinner",
     "calorie":200
 }
 ###
@@ -26,3 +26,17 @@ Authorization: Basic rest:python123
 ###
 DELETE  http://127.0.0.1:8000/api/meal/2/
 Authorization: Basic rest:python123
+
+###
+GET http://127.0.0.1:8000/api/meal/summary/
+Authorization: Token 36949aeab7374dd40d5e482c6b689946657c3eff
+
+###
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+    "username":"rest",
+    "password":"python123"
+}
+
